@@ -1,7 +1,7 @@
 node_name: peeler_potato
 node_id: 01JV7PW1B2V75MXH8TM6VS03C4
 node_url: null
-node_description: The BAD lab's Brooks Xpeel Plate Peeler
+node_description: The RAPID 350 SDL's Brooks Xpeel Plate Peeler
 node_type: device
 module_name: brooks_xpeel_module
 module_version: 1.0.0

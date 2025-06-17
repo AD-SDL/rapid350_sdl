@@ -1,7 +1,7 @@
-workcell_name: bad_workcell
+workcell_name: RAPID 350 Baker Enclosure Workcell
 manager_type: workcell_manager
 workcell_id: 01JV3AY60A4E2CR2DPHKP3698J
-description: The primary workcell in the Baker Enclosure in the BAD Lab
+description: The primary workcell in the Baker Enclosure in the RAPID 350 SDL
 nodes:
   peeler_potato: http://localhost:2001/
   sealer_harp: http://localhost:2002/

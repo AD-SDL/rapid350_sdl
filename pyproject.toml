@@ -1,5 +1,5 @@
 [project]
-name = "badlab_sdl"
+name = "rapid350_sdl"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [

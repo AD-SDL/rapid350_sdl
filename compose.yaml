@@ -1,4 +1,4 @@
-name: badlab_sdl
+name: rapid350_sdl
 
 include:
   - docker/infra.compose.yaml
