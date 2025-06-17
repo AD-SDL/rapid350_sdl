@@ -1,0 +1,62 @@
+# * Common configuration
+x-madsci-service: &madsci-service
+  image: ghcr.io/ad-sdl/madsci:v0.4.1
+  environment:
+    - USER_ID=${USER_ID:-1000}
+    - GROUP_ID=${GROUP_ID:-1000}
+  network_mode: host
+  env_file:
+    - ../.env
+  volumes:
+    - ${REPO_PATH:-.}/:/home/madsci/badlab_sdl
+    - ${REPO_PATH:-.}/.madsci:/home/madsci/.madsci
+  restart: unless-stopped
+
+services:
+  lab_manager:
+    <<: *madsci-service
+    container_name: lab_manager
+    image: ghcr.io/ad-sdl/madsci_dashboard:latest
+    command: python -m madsci.squid.lab_server
+    depends_on:
+      - event_manager
+
+  event_manager:
+    <<: *madsci-service
+    container_name: event_manager
+    command: python -m madsci.event_manager.event_server
+    depends_on:
+      - mongodb
+
+  experiment_manager:
+    <<: *madsci-service
+    container_name: experiment_manager
+    command: python -m madsci.experiment_manager.experiment_server
+    depends_on:
+      - mongodb
+      - lab_manager
+
+  resource_manager:
+    <<: *madsci-service
+    container_name: resource_manager
+    command: python -m madsci.resource_manager.resource_server
+    depends_on:
+      - postgres
+      - event_manager
+
+  data_manager:
+    <<: *madsci-service
+    container_name: data_manager
+    command: python -m madsci.data_manager.data_server
+    depends_on:
+      - mongodb
+  workcell_manager:
+    <<: *madsci-service
+    container_name: workcell_manager
+    command: python -m madsci.workcell_manager.workcell_server --cold_start_delay 0
+    depends_on:
+      - redis
+      - mongodb
+      - resource_manager
+      - event_manager
+      - postgres

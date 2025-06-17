@@ -1,0 +1,25 @@
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:8.0
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+  redis:
+    container_name: redis
+    image: redis:7.4
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+    command: redis-server --requirepass ${WORKCELL_REDIS_PASSWORD:-rpl}
+  postgres:
+    container_name: postgres
+    image: postgres:17
+    restart: unless-stopped
+    env_file: ../.env
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-rpl}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-rpl}
+      - POSTGRES_DB=resources
+    ports:
+      - 5432:5432

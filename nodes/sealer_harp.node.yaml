@@ -1,0 +1,14 @@
+node_name: sealer_harp
+node_id: 01JV7MWSMFAYEP9ZXFHEEPP2HH
+node_url: null
+node_description: The a4s sealer above the hidex in the BAD Lab enclosure
+node_type: device
+module_name: a4s_sealer_module
+module_version: 1.0.0
+capabilities: null
+commands: {}
+is_template: false
+config_defaults:
+  device_path: /dev/ttyUSB6
+  port: 2002
+  resource_server_url: http://localhost:8003
