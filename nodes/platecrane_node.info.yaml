@@ -1,0 +1,261 @@
+node_name: platecrane_node
+node_id: 01JYSN2F71NZYZQW0RCF8NDEZT
+node_description: null
+node_type: device
+module_name: hudson_platecrane_node
+module_version: 0.0.1
+capabilities:
+  get_info: true
+  get_state: true
+  get_status: true
+  send_action: true
+  get_action_result: true
+  get_action_history: true
+  action_files: true
+  send_admin_commands: true
+  set_config: true
+  get_resources: false
+  get_log: true
+  admin_commands:
+  - lock
+  - reset
+  - shutdown
+  - unlock
+node_url: null
+actions:
+  transfer:
+    name: transfer
+    description: Transfers a plate from one location to another.
+    args:
+      plate_type:
+        name: plate_type
+        description: ''
+        argument_type: str
+        required: false
+        default: null
+      height_offset:
+        name: height_offset
+        description: Height offset in motor steps
+        argument_type: int
+        required: false
+        default: 0
+      is_lid:
+        name: is_lid
+        description: Is the plate a lid?
+        argument_type: bool
+        required: false
+        default: false
+      has_lid:
+        name: has_lid
+        description: Does the plate have a lid?
+        argument_type: bool
+        required: false
+        default: false
+      source_grip_height_in_steps:
+        name: source_grip_height_in_steps
+        description: Source grip height in motor steps
+        argument_type: int
+        required: false
+        default: 0
+      target_grip_height_in_steps:
+        name: target_grip_height_in_steps
+        description: Target grip height in motor steps
+        argument_type: int
+        required: false
+        default: 0
+      incremental_lift:
+        name: incremental_lift
+        description: Incremental lift during transfer
+        argument_type: bool
+        required: false
+        default: false
+    locations:
+      source:
+        name: source
+        description: ''
+        argument_type: location
+        required: true
+        default: null
+      target:
+        name: target
+        description: ''
+        argument_type: location
+        required: true
+        default: null
+    files: {}
+    results: {}
+    blocking: false
+    asynchronous: true
+  remove_lid:
+    name: remove_lid
+    description: Removes a lid from a plate.
+    args:
+      plate_type:
+        name: plate_type
+        description: Type of plate, e.g. '96-well'
+        argument_type: str
+        required: true
+        default: null
+      height_offset:
+        name: height_offset
+        description: Height offset in motor steps
+        argument_type: int
+        required: false
+        default: 0
+    locations:
+      source:
+        name: source
+        description: ''
+        argument_type: location
+        required: true
+        default: null
+      target:
+        name: target
+        description: ''
+        argument_type: location
+        required: true
+        default: null
+    files: {}
+    results: {}
+    blocking: false
+    asynchronous: true
+  replace_lid:
+    name: replace_lid
+    description: Removes a lid from a plate.
+    args:
+      plate_type:
+        name: plate_type
+        description: Type of plate, e.g. '96-well'
+        argument_type: str
+        required: true
+        default: null
+      height_offset:
+        name: height_offset
+        description: Height offset in motor steps
+        argument_type: int
+        required: false
+        default: 0
+    locations:
+      source:
+        name: source
+        description: ''
+        argument_type: location
+        required: true
+        default: null
+      target:
+        name: target
+        description: ''
+        argument_type: location
+        required: true
+        default: null
+    files: {}
+    results: {}
+    blocking: false
+    asynchronous: true
+  home:
+    name: home
+    description: Moves the PlateCrane to the home position.
+    args: {}
+    locations: {}
+    files: {}
+    results: {}
+    blocking: false
+    asynchronous: true
+  move:
+    name: move
+    description: Moves the PlateCrane to a specified position.
+    args: {}
+    locations:
+      target:
+        name: target
+        description: ''
+        argument_type: location
+        required: true
+        default: null
+    files: {}
+    results: {}
+    blocking: false
+    asynchronous: true
+config:
+  node_definition: nodes/platecrane_poly.node.yaml
+  node_info_path: null
+  update_node_files: true
+  status_update_interval: 2.0
+  state_update_interval: 2.0
+  node_url: http://potts.cels.anl.gov:2000/
+  uvicorn_kwargs: {}
+  device: /dev/ttyUSB2
+  baud_rate: 9600
+  default_speed: 100
+config_schema:
+  description: Configuration for the PlateCrane REST Node.
+  properties:
+    node_definition:
+      anyOf:
+      - type: string
+      - format: path
+        type: string
+      - type: 'null'
+      default: default.node.yaml
+      description: Path to the node definition file to use. If set, the node will
+        load the definition from this file on startup. Otherwise, a default configuration
+        will be created.
+      title: Node Definition File
+    node_info_path:
+      anyOf:
+      - type: string
+      - format: path
+        type: string
+      - type: 'null'
+      default: null
+      description: Path to export the generated node info file. If not set, will use
+        the node name and the node_definition's path.
+      title: Node Info Path
+    update_node_files:
+      default: true
+      description: Whether to update the node definition and info files on startup.
+        If set to False, the node will not update the files even if they are out of
+        date.
+      title: Update Node Files
+      type: boolean
+    status_update_interval:
+      anyOf:
+      - type: number
+      - type: 'null'
+      default: 2.0
+      description: The interval in seconds at which the node should update its status.
+      title: Status Update Interval
+    state_update_interval:
+      anyOf:
+      - type: number
+      - type: 'null'
+      default: 2.0
+      description: The interval in seconds at which the node should update its state.
+      title: State Update Interval
+    node_url:
+      default: http://127.0.0.1:2000/
+      description: The URL used to communicate with the node. This is the base URL
+        for the REST API.
+      format: uri
+      minLength: 1
+      title: Node URL
+      type: string
+    uvicorn_kwargs:
+      additionalProperties: true
+      description: Configuration for the Uvicorn server that runs the REST API.
+      title: Uvicorn Configuration
+      type: object
+    device:
+      default: /dev/ttyUSB0
+      title: Device
+      type: string
+    baud_rate:
+      default: 9600
+      title: Baud Rate
+      type: integer
+    default_speed:
+      default: 100
+      title: Default Speed
+      type: integer
+  title: PlateCraneConfig
+  type: object

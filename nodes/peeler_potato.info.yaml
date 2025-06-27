@@ -1,0 +1,143 @@
+node_name: peeler_potato
+node_id: 01JV7PW1B2V75MXH8TM6VS03C4
+node_description: The RAPID 350 SDL's Brooks Xpeel Plate Peeler
+node_type: device
+module_name: brooks_xpeel_module
+module_version: 1.0.0
+capabilities:
+  get_info: true
+  get_state: true
+  get_status: true
+  send_action: true
+  get_action_result: true
+  get_action_history: true
+  action_files: true
+  send_admin_commands: true
+  set_config: true
+  get_resources: false
+  get_log: true
+  admin_commands:
+  - lock
+  - reset
+  - shutdown
+  - unlock
+node_url: null
+actions:
+  peel:
+    name: peel
+    description: "\n        Peel a plate seal.\n\n        :param param_set_num: The\
+      \ parameter set number to use for peeling.\n\n            1: [\"default -2 mm\"\
+      , \"fast\"]\n            2: [\"default -2 mm\", \"slow\"]\n            3: [\"\
+      default\", \"fast\"]\n            4: [\"default\", \"slow\"]\n            5:\
+      \ [\"default +2 mm\", \"fast\"]\n            6: [\"default +2 mm\", \"slow\"\
+      ]\n            7: [\"default +4 mm\", \"fast\"]\n            8: [\"default +4\
+      \ mm\", \"slow\"]\n            9: [\"custom\", \"custom\"]\n\n        :param\
+      \ param_time: The time in seconds to wait for the peel to complete.\n      \
+      \  "
+    args:
+      param_set_num:
+        name: param_set_num
+        description: ''
+        argument_type: int
+        required: false
+        default: 1
+      param_time:
+        name: param_time
+        description: ''
+        argument_type: float
+        required: false
+        default: 2.5
+    locations: {}
+    files: {}
+    results: {}
+    blocking: false
+    asynchronous: true
+  reset_peeler:
+    name: reset_peeler
+    description: Returns elevator and conveyor to home location and gets fresh tape
+      in place to use.
+    args: {}
+    locations: {}
+    files: {}
+    results: {}
+    blocking: false
+    asynchronous: true
+config:
+  node_definition: nodes/peeler_potato.node.yaml
+  node_info_path: null
+  update_node_files: true
+  status_update_interval: 2.0
+  state_update_interval: 2.0
+  node_url: http://potts.cels.anl.gov:2001/
+  uvicorn_kwargs: {}
+  device_port: /dev/ttyUSB4
+  check_for_plate: false
+config_schema:
+  description: Configuration for the Peeler node.
+  properties:
+    node_definition:
+      anyOf:
+      - type: string
+      - format: path
+        type: string
+      - type: 'null'
+      default: default.node.yaml
+      description: Path to the node definition file to use. If set, the node will
+        load the definition from this file on startup. Otherwise, a default configuration
+        will be created.
+      title: Node Definition File
+    node_info_path:
+      anyOf:
+      - type: string
+      - format: path
+        type: string
+      - type: 'null'
+      default: null
+      description: Path to export the generated node info file. If not set, will use
+        the node name and the node_definition's path.
+      title: Node Info Path
+    update_node_files:
+      default: true
+      description: Whether to update the node definition and info files on startup.
+        If set to False, the node will not update the files even if they are out of
+        date.
+      title: Update Node Files
+      type: boolean
+    status_update_interval:
+      anyOf:
+      - type: number
+      - type: 'null'
+      default: 2.0
+      description: The interval in seconds at which the node should update its status.
+      title: Status Update Interval
+    state_update_interval:
+      anyOf:
+      - type: number
+      - type: 'null'
+      default: 2.0
+      description: The interval in seconds at which the node should update its state.
+      title: State Update Interval
+    node_url:
+      default: http://127.0.0.1:2000/
+      description: The URL used to communicate with the node. This is the base URL
+        for the REST API.
+      format: uri
+      minLength: 1
+      title: Node URL
+      type: string
+    uvicorn_kwargs:
+      additionalProperties: true
+      description: Configuration for the Uvicorn server that runs the REST API.
+      title: Uvicorn Configuration
+      type: object
+    device_port:
+      title: Device Port
+      type: string
+    check_for_plate:
+      default: false
+      title: Check For Plate
+      type: boolean
+  required:
+  - device_port
+  title: PeelerNodeConfig
+  type: object

@@ -14,22 +14,43 @@ x-madsci-service: &madsci-service
 
 services:
 
-  peeler_potato:
+  platecrane_poly:
     <<: *madsci-service
-    container_name: peeler_potato
-    image: ghcr.io/ad-sdl/brooks_xpeel_module:dev
+    container_name: platecrane_poly
+    image: ghcr.io/ad-sdl/hudson_platecrane_module
     privileged: true
+    environment:
+      - NODE_URL=http://potts.cels.anl.gov:2000/
+      - NODE_DEVICE=/dev/ttyUSB2
+      - NODE_DEFINITION=nodes/platecrane_poly.node.yaml
     volumes:
       - ../nodes:/home/madsci/nodes
       - /dev:/dev
-    command: python -m peeler_rest_node --definition nodes/peeler_potato.node.yaml
+    command: python hudson_platecrane_module/src/hudson_platecrane_node.py
+
+  peeler_potato:
+    <<: *madsci-service
+    container_name: peeler_potato
+    image: ghcr.io/ad-sdl/brooks_xpeel_module
+    privileged: true
+    environment:
+      - NODE_URL=http://potts.cels.anl.gov:2001/
+      - NODE_DEVICE_PORT=/dev/ttyUSB4
+      - NODE_DEFINITION=nodes/peeler_potato.node.yaml
+    volumes:
+      - ../nodes:/home/madsci/nodes
+      - /dev:/dev
+    command: python -m peeler_rest_node
 
   sealer_harp:
     <<: *madsci-service
     container_name: sealer_harp
-    image: ghcr.io/ad-sdl/a4s_sealer_module:dev
+    image: ghcr.io/ad-sdl/a4s_sealer_module
     privileged: true
+    environment:
+      - NODE_URL=http://potts.cels.anl.gov:2002/
+      - NODE_DEVICE_PATH=/dev/ttyUSB6
+      - NODE_DEFINITION=nodes/sealer_harp.node.yaml
     volumes:
       - ../nodes:/home/madsci/nodes
       - /dev:/dev
-    command: python -m sealer_rest_node --definition nodes/sealer_harp.node.yaml
