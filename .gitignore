@@ -306,3 +306,11 @@ test_experiment/
 
 #node modules
 **/node_modules
+
+# Frigate
+frigate/config/*
+frigate/storage/
+!frigate/config/config.yml
+
+# VS Code
+.vscode

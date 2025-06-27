@@ -1,6 +1,6 @@
 # * Common configuration
 x-madsci-service: &madsci-service
-  image: ghcr.io/ad-sdl/madsci:v0.4.1
+  image: ghcr.io/ad-sdl/madsci:v0.4.2
   environment:
     - USER_ID=${USER_ID:-1000}
     - GROUP_ID=${GROUP_ID:-1000}

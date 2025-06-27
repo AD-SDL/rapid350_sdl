@@ -1,0 +1,58 @@
+mqtt:
+  enabled: false
+
+go2rtc:
+  streams:
+    biocam1_stream:
+      - rtsp://biocam1.cels.anl.gov:554/s2
+    biocam2_stream:
+      - rtsp://biocam2.cels.anl.gov:554/s2
+    biocam3_stream:
+      - rtsp://biocam3.cels.anl.gov:554/s2
+    biocam1:
+      - ffmpeg:biocam1_stream#video=h264#rotate=90
+    biocam2:
+      - ffmpeg:biocam2_stream#video=h264#rotate=90
+    biocam3:
+      - ffmpeg:biocam3_stream#video=h264#rotate=90
+
+birdseye:
+  enabled: true
+  mode: continuous
+  width: 1920
+  height: 1080
+
+detect:
+  enabled: false
+
+cameras:
+  biocam1:
+    ffmpeg:
+      # hwaccel_args: preset-nvidia-h264
+      inputs:
+        - path: rtsp://localhost:8554/biocam1
+
+  biocam3:
+    ffmpeg:
+      # hwaccel_args: preset-nvidia-h264
+      inputs:
+        - path: rtsp://localhost:8554/biocam3
+
+  biocam2:
+    ffmpeg:
+      # hwaccel_args: preset-nvidia-h264
+      inputs:
+        - path: rtsp://localhost:8554/biocam2
+
+
+
+version: 0.14
+camera_groups:
+  Everything:
+    order: 1
+    icon: LuActivity
+    cameras:
+      - birdseye
+      - biocam1
+      - biocam2
+      - biocam3

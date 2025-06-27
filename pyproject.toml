@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "Casey Stone", email = "cstone@anl.gov"},
 ]
-dependencies = ["pre-commit>=4.2.0", "ruff>=0.11.9", "madsci-client>=0.3.0"]
+dependencies = ["pre-commit>=4.2.0", "ruff>=0.11.9", "madsci-client>=0.4.2"]
 requires-python = ">=3.9.1"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +13,8 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+]

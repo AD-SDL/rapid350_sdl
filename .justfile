@@ -74,3 +74,6 @@ down:
 # Alias for docker compose
 dc *args:
   @docker compose {{args}}
+
+frigate:
+  @docker compose -f $(dirname {{justfile()}})/frigate/rapid350_frigate.compose.yaml up -d
