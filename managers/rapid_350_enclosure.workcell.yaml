@@ -6,4 +6,33 @@ nodes:
   platecrane_poly: http://potts.cels.anl.gov:2000/
   peeler_potato: http://potts.cels.anl.gov:2001/
   sealer_harp: http://potts.cels.anl.gov:2002/
-locations: []
+  hidex_howard: http://hudson01.cels.anl.gov:2000/
+locations:
+- location_name: Stack1
+  location_id: 01K05DKG6A2RDK6F7ZCGC6ZV3T
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Stack1
+      joint_angles:
+      - 164713
+      - -32703
+      - 450
+      - 5472
+      location_type: stack
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Solo.Position2
+  location_id: 01K05DN23ET4SCZ5PVPZNS4KHW
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Solo.Position2
+      joint_angles:
+      - 57372
+      - -27457
+      - -233
+      - 2613
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
