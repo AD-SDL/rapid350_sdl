@@ -6,8 +6,24 @@ nodes:
   platecrane_poly: http://potts.cels.anl.gov:2000/
   peeler_potato: http://potts.cels.anl.gov:2001/
   sealer_harp: http://potts.cels.anl.gov:2002/
+  liconic_lisa: http://potts.cels.anl.gov:2003/
   hidex_howard: http://hudson01.cels.anl.gov:2000/
+  solo_sam: http://hudson01.cels.anl.gov:2003/
 locations:
+- location_name: Safe
+  location_id: 01K07MPBHF1TCS7ESBYFH8T8VZ
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Safe
+      joint_angles:
+      - 182220
+      - 2500
+      - 460
+      - 308
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
 - location_name: Stack1
   location_id: 01K05DKG6A2RDK6F7ZCGC6ZV3T
   description: null
@@ -22,6 +38,118 @@ locations:
       location_type: stack
       safe_approach_height: 0
   resource_definition: null
+- location_name: Stack2
+  location_id: 01K07MPBHF80WKAVVWAWTT8RMH
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Stack2
+      joint_angles:
+      - 182201
+      - -32703
+      - 486
+      - 5445
+      location_type: stack
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Stack3
+  location_id: 01K07MPBHFT4FQ8QMQCXMZVPWN
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Stack3
+      joint_angles:
+      - 199696
+      - -32703
+      - 486
+      - 5445
+      location_type: stack
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Stack4
+  location_id: 01K07MPBHG6K7WF8SNNFXX3QEM
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Stack4
+      joint_angles:
+      - 217301
+      - -32703
+      - 486
+      - 5445
+      location_type: stack
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Stack5
+  location_id: 01K07MPBHGPNS94D5Z7MDKVZFM
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Stack5
+      joint_angles:
+      - 235004
+      - -32703
+      - 486
+      - 5445
+      location_type: stack
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: LidNest1
+  location_id: 01K07MPBHG13S088PKC78FZJEX
+  description: null
+  lookup:
+    platecrane_poly:
+      name: LidNest1
+      joint_angles:
+      - 168367
+      - -31725
+      - 470
+      - -329
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: LidNest2
+  location_id: 01K07MPBHGVN6DAPPMN2A9VWQD
+  description: null
+  lookup:
+    platecrane_poly:
+      name: LidNest2
+      joint_angles:
+      - 199862
+      - -31725
+      - 462
+      - -328
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: LidNest3
+  location_id: 01K07MPBHGZ2H7Z7795PV3D01Y
+  description: null
+  lookup:
+    platecrane_poly:
+      name: LidNest3
+      joint_angles:
+      - 231449
+      - -31800
+      - 484
+      - -306
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Solo.Position1
+  location_id: 01K07MPBHGCBJHJF7A03SZ3EQQ
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Solo.Position1
+      joint_angles:
+      - 41665
+      - -27455
+      - -830
+      - 5046
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
 - location_name: Solo.Position2
   location_id: 01K05DN23ET4SCZ5PVPZNS4KHW
   description: null
@@ -33,6 +161,62 @@ locations:
       - -27457
       - -233
       - 2613
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Hidex.Nest
+  location_id: 01K07MPBHG1F53VY96RB6EFTY6
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Hidex.Nest
+      joint_angles:
+      - 102406
+      - -31090
+      - -5901
+      - 2373
+      location_type: nest
+      safe_approach_height: -27033
+  resource_definition: null
+- location_name: Sealer.Nest
+  location_id: 01K07MPBHGJ7XFCT5VHBH3M9FV
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Sealer.Nest
+      joint_angles:
+      - 118212
+      - -998
+      - -4758
+      - 4071
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Peeler.Nest
+  location_id: 01K07MPBHGJ3GYC10XA6C4PMB9
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Peeler.Nest
+      joint_angles:
+      - 302738
+      - -30340
+      - -4142
+      - 2351
+      location_type: nest
+      safe_approach_height: 0
+  resource_definition: null
+- location_name: Liconic.Nest
+  location_id: 01K07MPBHGSVMHP34GPNXT7B4J
+  description: null
+  lookup:
+    platecrane_poly:
+      name: Liconic.Nest
+      joint_angles:
+      - 267724
+      - -24666
+      - -5357
+      - 1591
       location_type: nest
       safe_approach_height: 0
   resource_definition: null
