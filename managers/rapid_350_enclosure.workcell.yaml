@@ -6,7 +6,7 @@ nodes:
   platecrane_poly: http://potts.cels.anl.gov:2000/
   peeler_potato: http://potts.cels.anl.gov:2001/
   sealer_harp: http://potts.cels.anl.gov:2002/
-  liconic_lisa: http://potts.cels.anl.gov:2003/
+  liconic_lisa: http://hudson01.cels.anl.gov:2005/
   hidex_howard: http://hudson01.cels.anl.gov:2000/
   solo_sam: http://hudson01.cels.anl.gov:2003/
 locations:

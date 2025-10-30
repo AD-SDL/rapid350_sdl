@@ -9,12 +9,20 @@ go2rtc:
       - rtsp://biocam2.cels.anl.gov:554/s2
     biocam3_stream:
       - rtsp://biocam3.cels.anl.gov:554/s2
+    rplcam17_stream:
+      - rtsp://admin:rplcam17@rplcam17.cels.anl.gov:554
+    panopticon1_stream:
+      - rtsp://admin@panopticon1.cels.anl.gov:554
     biocam1:
       - ffmpeg:biocam1_stream#video=h264#rotate=90
     biocam2:
       - ffmpeg:biocam2_stream#video=h264#rotate=90
     biocam3:
-      - ffmpeg:biocam3_stream#video=h264#rotate=90
+      - ffmpeg:biocam3_stream#video=h264#rotate=90+
+    rplcam17:
+      - ffmpeg:rplcam17_stream#video=h264
+    panopticon1:
+      - ffmpeg:panopticon1_stream#video=h264
 
 birdseye:
   enabled: true
@@ -44,6 +52,16 @@ cameras:
       inputs:
         - path: rtsp://localhost:8554/biocam2
 
+  rplcam17:
+    ffmpeg:
+      # hwaccel_args: preset-nvidia-h264
+      inputs:
+        - path: rtsp://localhost:8554/rplcam17
+
+  panopticon1:
+    ffmpeg:
+      inputs:
+        - path: rtsp://localhost:8554/panopticon1
 
 
 version: 0.14
@@ -56,3 +74,5 @@ camera_groups:
       - biocam1
       - biocam2
       - biocam3
+      - panopticon1
+      - rplcam17

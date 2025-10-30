@@ -55,16 +55,16 @@ services:
       - ../nodes:/home/madsci/nodes
       - /dev:/dev
 
-  liconic_lisa:
-    <<: *madsci-service
-    container_name: liconic_lisa
-    image: ghcr.io/ad-sdl/liconic_module
-    privileged: true
-    environment:
-      - NODE_URL=http://potts.cels.anl.gov:2003/
-      - NODE_DEVICE=/dev/ttyUSB0
-      - NODE_DEFINITION=nodes/liconic_lisa.node.yaml
-    volumes:
-      - ../nodes:/home/madsci/nodes
-      - /dev:/dev
-      - ../.madsci:/home/madsci/.madsci
+  # liconic_lisa:
+  #   <<: *madsci-service
+  #   container_name: liconic_lisa
+  #   image: ghcr.io/ad-sdl/liconic_module
+  #   privileged: true
+  #   environment:
+  #     - NODE_URL=http://potts.cels.anl.gov:2003/
+  #     - NODE_DEVICE=/dev/ttyUSB0
+  #     - NODE_DEFINITION=nodes/liconic_lisa.node.yaml
+  #   volumes:
+  #     - ../nodes:/home/madsci/nodes
+  #     - /dev:/dev
+  #     - ../.madsci:/home/madsci/.madsci
