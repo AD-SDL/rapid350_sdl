@@ -1,5 +1,4 @@
 name: RAPID 350 Event Manager
 description: Event Manager for the RAPID 350 SDL
-manager_type: event_manager
-event_manager_id: 01JXZWDPXYSVGC0X0MBQ6RAZVK
 manager_id: 01JV38DP56ZVNBFQ9ZS1ADGPY4
+manager_type: event_manager

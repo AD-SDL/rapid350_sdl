@@ -1,14 +1,3 @@
-name: RAPID 350 Baker Enclosure Workcell
-manager_type: workcell_manager
-manager_id: 01JV3AY60A4E2CR2DPHKP3698J
-description: The primary workcell in the Baker Enclosure in the RAPID 350 SDL
-nodes:
-  platecrane_poly: http://potts.cels.anl.gov:2000/
-  peeler_potato: http://potts.cels.anl.gov:2001/
-  sealer_harp: http://potts.cels.anl.gov:2002/
-  liconic_lisa: http://hudson01.cels.anl.gov:2005/
-  hidex_howard: http://hudson01.cels.anl.gov:2000/
-  solo_sam: http://hudson01.cels.anl.gov:2003/
 locations:
 - location_name: Safe
   location_id: 01K07MPBHF1TCS7ESBYFH8T8VZ

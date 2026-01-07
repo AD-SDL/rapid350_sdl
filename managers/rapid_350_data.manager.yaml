@@ -1,5 +1,4 @@
 name: RAPID 350 Data
 description: Data Manager for the RAPID 350 SDL
-manager_type: data_manager
-data_manager_id: 01JXZWEP0PN75BND80EGYJVC5Y
 manager_id: 01JV38KW7YYVC7DR1QQ7S3AF8C
+manager_type: data_manager

@@ -5,13 +5,25 @@ services:
     restart: unless-stopped
     ports:
       - 27017:27017
+    volumes:
+      - ${REPO_PATH:-..}/.madsci/mongodb:/data/db
   redis:
     container_name: redis
     image: redis:7.4
     restart: unless-stopped
     ports:
       - 6379:6379
-    command: redis-server --requirepass ${WORKCELL_REDIS_PASSWORD:-rpl}
+    command: redis-server --appendonly yes --save 900 1 --save 300 10 --save 60 10000 --requirepass ${WORKCELL_REDIS_PASSWORD:-rpl}
+
+    volumes:
+      - ${REPO_PATH:-..}/.madsci/redis:/data
+  redis_commander:
+    container_name: redis_commander
+    image: ghcr.io/joeferner/redis-commander:latest
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - REDIS_PASSWORD=${WORKCELL_REDIS_PASSWORD:-rpl}
   postgres:
     container_name: postgres
     image: postgres:17
@@ -23,3 +35,5 @@ services:
       - POSTGRES_DB=resources
     ports:
       - 5432:5432
+    volumes:
+      - ${REPO_PATH:-..}/.madsci/postgres:/var/lib/postgresql/data
