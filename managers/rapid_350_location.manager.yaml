@@ -1,8 +1,12 @@
+name: RAPID 350 Location Manager
+description: null
+manager_id: null
+manager_type: location_manager
 locations:
 - location_name: Safe
   location_id: 01K07MPBHF1TCS7ESBYFH8T8VZ
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Safe
       joint_angles:
@@ -16,7 +20,7 @@ locations:
 - location_name: Stack1
   location_id: 01K05DKG6A2RDK6F7ZCGC6ZV3T
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Stack1
       joint_angles:
@@ -30,7 +34,7 @@ locations:
 - location_name: Stack2
   location_id: 01K07MPBHF80WKAVVWAWTT8RMH
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Stack2
       joint_angles:
@@ -44,7 +48,7 @@ locations:
 - location_name: Stack3
   location_id: 01K07MPBHFT4FQ8QMQCXMZVPWN
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Stack3
       joint_angles:
@@ -58,7 +62,7 @@ locations:
 - location_name: Stack4
   location_id: 01K07MPBHG6K7WF8SNNFXX3QEM
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Stack4
       joint_angles:
@@ -72,7 +76,7 @@ locations:
 - location_name: Stack5
   location_id: 01K07MPBHGPNS94D5Z7MDKVZFM
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Stack5
       joint_angles:
@@ -86,7 +90,7 @@ locations:
 - location_name: LidNest1
   location_id: 01K07MPBHG13S088PKC78FZJEX
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: LidNest1
       joint_angles:
@@ -100,7 +104,7 @@ locations:
 - location_name: LidNest2
   location_id: 01K07MPBHGVN6DAPPMN2A9VWQD
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: LidNest2
       joint_angles:
@@ -114,7 +118,7 @@ locations:
 - location_name: LidNest3
   location_id: 01K07MPBHGZ2H7Z7795PV3D01Y
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: LidNest3
       joint_angles:
@@ -128,7 +132,7 @@ locations:
 - location_name: Solo.Position1
   location_id: 01K07MPBHGCBJHJF7A03SZ3EQQ
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Solo.Position1
       joint_angles:
@@ -142,7 +146,7 @@ locations:
 - location_name: Solo.Position2
   location_id: 01K05DN23ET4SCZ5PVPZNS4KHW
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Solo.Position2
       joint_angles:
@@ -156,7 +160,7 @@ locations:
 - location_name: Hidex.Nest
   location_id: 01K07MPBHG1F53VY96RB6EFTY6
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Hidex.Nest
       joint_angles:
@@ -170,7 +174,7 @@ locations:
 - location_name: Sealer.Nest
   location_id: 01K07MPBHGJ7XFCT5VHBH3M9FV
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Sealer.Nest
       joint_angles:
@@ -184,7 +188,7 @@ locations:
 - location_name: Peeler.Nest
   location_id: 01K07MPBHGJ3GYC10XA6C4PMB9
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Peeler.Nest
       joint_angles:
@@ -198,7 +202,7 @@ locations:
 - location_name: Liconic.Nest
   location_id: 01K07MPBHGSVMHP34GPNXT7B4J
   description: null
-  lookup:
+  representations:
     platecrane_poly:
       name: Liconic.Nest
       joint_angles:
