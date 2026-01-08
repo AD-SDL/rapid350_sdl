@@ -1,6 +1,6 @@
 name: RAPID 350 Location Manager
 description: null
-manager_id: null
+manager_id: 01KEF6JD6VQ9QCT60YBH8JY40X
 manager_type: location_manager
 locations:
 - location_name: Safe
@@ -16,7 +16,9 @@ locations:
       - 308
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: null
+  resource_template_overrides: null
+  allow_transfers: true
 - location_name: Stack1
   location_id: 01K05DKG6A2RDK6F7ZCGC6ZV3T
   description: null
@@ -33,6 +35,7 @@ locations:
   resource_template_name: plate_stack
   resource_template_overrides:
     resource_name: Stack1
+  allow_transfers: true
 - location_name: Stack2
   location_id: 01K07MPBHF80WKAVVWAWTT8RMH
   description: null
@@ -49,6 +52,7 @@ locations:
   resource_template_name: plate_stack
   resource_template_overrides:
     resource_name: Stack2
+  allow_transfers: true
 - location_name: Stack3
   location_id: 01K07MPBHFT4FQ8QMQCXMZVPWN
   description: null
@@ -65,6 +69,7 @@ locations:
   resource_template_name: plate_stack
   resource_template_overrides:
     resource_name: Stack3
+  allow_transfers: true
 - location_name: Stack4
   location_id: 01K07MPBHG6K7WF8SNNFXX3QEM
   description: null
@@ -81,6 +86,7 @@ locations:
   resource_template_name: plate_stack
   resource_template_overrides:
     resource_name: Stack4
+  allow_transfers: true
 - location_name: Stack5
   location_id: 01K07MPBHGPNS94D5Z7MDKVZFM
   description: null
@@ -97,6 +103,7 @@ locations:
   resource_template_name: plate_stack
   resource_template_overrides:
     resource_name: Stack5
+  allow_transfers: true
 - location_name: LidNest1
   location_id: 01K07MPBHG13S088PKC78FZJEX
   description: null
@@ -113,6 +120,7 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: LidNest1
+  allow_transfers: true
 - location_name: LidNest2
   location_id: 01K07MPBHGVN6DAPPMN2A9VWQD
   description: null
@@ -129,6 +137,7 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: LidNest2
+  allow_transfers: true
 - location_name: LidNest3
   location_id: 01K07MPBHGZ2H7Z7795PV3D01Y
   description: null
@@ -145,6 +154,7 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: LidNest3
+  allow_transfers: true
 - location_name: Solo.Position1
   location_id: 01K07MPBHGCBJHJF7A03SZ3EQQ
   description: null
@@ -161,6 +171,7 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: Solo.Position1
+  allow_transfers: true
 - location_name: Solo.Position2
   location_id: 01K05DN23ET4SCZ5PVPZNS4KHW
   description: null
@@ -177,6 +188,7 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: Solo.Position2
+  allow_transfers: true
 - location_name: Hidex.Nest
   location_id: 01K07MPBHG1F53VY96RB6EFTY6
   description: null
@@ -193,6 +205,7 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: Hidex.Nest
+  allow_transfers: true
 - location_name: Sealer.Nest
   location_id: 01K07MPBHGJ7XFCT5VHBH3M9FV
   description: null
@@ -209,6 +222,7 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: Sealer.Nest
+  allow_transfers: true
 - location_name: Peeler.Nest
   location_id: 01K07MPBHGJ3GYC10XA6C4PMB9
   description: null
@@ -224,7 +238,8 @@ locations:
       safe_approach_height: 0
   resource_template_name: plate_nest
   resource_template_overrides:
-    resource_name: Sealer.Nest
+    resource_name: Peeler.Nest
+  allow_transfers: true
 - location_name: Liconic.Nest
   location_id: 01K07MPBHGSVMHP34GPNXT7B4J
   description: null
@@ -241,3 +256,5 @@ locations:
   resource_template_name: plate_nest
   resource_template_overrides:
     resource_name: Liconic.Nest
+  allow_transfers: true
+transfer_capabilities: null

@@ -1,0 +1,361 @@
+stacks:
+  '1':
+    slots:
+      '1':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '2':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '3':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '4':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '5':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '6':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '7':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '8':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '9':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '10':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '11':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '12':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '13':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '14':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '15':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '16':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '17':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '18':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '19':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '20':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '21':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '22':
+        occupied: false
+        plate_id: null
+        time_added: null
+  '2':
+    slots:
+      '1':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '2':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '3':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '4':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '5':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '6':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '7':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '8':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '9':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '10':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '11':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '12':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '13':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '14':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '15':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '16':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '17':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '18':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '19':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '20':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '21':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '22':
+        occupied: false
+        plate_id: null
+        time_added: null
+  '3':
+    slots:
+      '1':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '2':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '3':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '4':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '5':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '6':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '7':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '8':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '9':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '10':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '11':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '12':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '13':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '14':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '15':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '16':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '17':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '18':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '19':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '20':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '21':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '22':
+        occupied: false
+        plate_id: null
+        time_added: null
+  '4':
+    slots:
+      '1':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '2':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '3':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '4':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '5':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '6':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '7':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '8':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '9':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '10':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '11':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '12':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '13':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '14':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '15':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '16':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '17':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '18':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '19':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '20':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '21':
+        occupied: false
+        plate_id: null
+        time_added: null
+      '22':
+        occupied: false
+        plate_id: null
+        time_added: null

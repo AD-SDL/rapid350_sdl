@@ -27,7 +27,7 @@ default_templates:
   - slot
   version: 1.0.0
 - template_name: plate_stack
-  description: Standard plate stack for holding multiple plates 
+  description: Standard plate stack for holding multiple plates
   base_resource:
     resource_name: plate_nest_template
     resource_name_prefix: null
