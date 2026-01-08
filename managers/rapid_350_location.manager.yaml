@@ -8,7 +8,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Safe
       joint_angles:
       - 182220
       - 2500
@@ -24,7 +23,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Stack1
       joint_angles:
       - 164713
       - -32703
@@ -41,7 +39,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Stack2
       joint_angles:
       - 182201
       - -32703
@@ -58,7 +55,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Stack3
       joint_angles:
       - 199696
       - -32703
@@ -75,7 +71,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Stack4
       joint_angles:
       - 217301
       - -32703
@@ -92,7 +87,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Stack5
       joint_angles:
       - 235004
       - -32703
@@ -109,7 +103,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: LidNest1
       joint_angles:
       - 168367
       - -31725
@@ -126,7 +119,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: LidNest2
       joint_angles:
       - 199862
       - -31725
@@ -143,7 +135,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: LidNest3
       joint_angles:
       - 231449
       - -31800
@@ -160,7 +151,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Solo.Position1
       joint_angles:
       - 41665
       - -27455
@@ -177,7 +167,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Solo.Position2
       joint_angles:
       - 57372
       - -27457
@@ -194,7 +183,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Hidex.Nest
       joint_angles:
       - 102406
       - -31090
@@ -211,7 +199,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Sealer.Nest
       joint_angles:
       - 118212
       - -998
@@ -228,7 +215,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Peeler.Nest
       joint_angles:
       - 302738
       - -30340
@@ -245,7 +231,6 @@ locations:
   description: null
   representations:
     platecrane_poly:
-      name: Liconic.Nest
       joint_angles:
       - 267724
       - -24666
