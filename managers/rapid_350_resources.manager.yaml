@@ -3,4 +3,48 @@ description: Resource Manager for the RAPID 350 SDL
 manager_id: 01JV38JJWYDHT4QSHE9J5HG2TD
 manager_type: resource_manager
 resource_manager_id: 01JV38JJWYDHT4QSHE9J5HG2TD
-default_templates: []
+default_templates:
+- template_name: plate_nest
+  description: Standard plate nest for holding individual plates on instrument decks
+  base_resource:
+    resource_name: plate_nest_template
+    resource_name_prefix: null
+    resource_class: ''
+    base_type: slot
+    resource_description: plate nest for holding well plates
+    owner: {}
+    custom_attributes: null
+    capacity: 1
+    default_children: null
+    default_child_template: null
+    default_child_quantity: null
+  required_overrides:
+  - resource_name
+  tags:
+  - plate
+  - nest
+  - deck
+  - slot
+  version: 1.0.0
+- template_name: plate_stack
+  description: Standard plate stack for holding multiple plates 
+  base_resource:
+    resource_name: plate_nest_template
+    resource_name_prefix: null
+    resource_class: ''
+    base_type: stack
+    resource_description: plate stack for holding well plates
+    owner: {}
+    custom_attributes: null
+    capacity: 1
+    default_children: null
+    default_child_template: null
+    default_child_quantity: null
+  required_overrides:
+  - resource_name
+  tags:
+  - plate
+  - nest
+  - deck
+  - stack
+  version: 1.0.0

@@ -30,7 +30,9 @@ locations:
       - 5472
       location_type: stack
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_stack
+  resource_template_overrides:
+    resource_name: Stack1
 - location_name: Stack2
   location_id: 01K07MPBHF80WKAVVWAWTT8RMH
   description: null
@@ -44,7 +46,9 @@ locations:
       - 5445
       location_type: stack
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_stack
+  resource_template_overrides:
+    resource_name: Stack2
 - location_name: Stack3
   location_id: 01K07MPBHFT4FQ8QMQCXMZVPWN
   description: null
@@ -58,7 +62,9 @@ locations:
       - 5445
       location_type: stack
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_stack
+  resource_template_overrides:
+    resource_name: Stack3
 - location_name: Stack4
   location_id: 01K07MPBHG6K7WF8SNNFXX3QEM
   description: null
@@ -72,7 +78,9 @@ locations:
       - 5445
       location_type: stack
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_stack
+  resource_template_overrides:
+    resource_name: Stack4
 - location_name: Stack5
   location_id: 01K07MPBHGPNS94D5Z7MDKVZFM
   description: null
@@ -86,7 +94,9 @@ locations:
       - 5445
       location_type: stack
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_stack
+  resource_template_overrides:
+    resource_name: Stack5
 - location_name: LidNest1
   location_id: 01K07MPBHG13S088PKC78FZJEX
   description: null
@@ -100,7 +110,9 @@ locations:
       - -329
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: LidNest1
 - location_name: LidNest2
   location_id: 01K07MPBHGVN6DAPPMN2A9VWQD
   description: null
@@ -114,7 +126,9 @@ locations:
       - -328
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: LidNest2
 - location_name: LidNest3
   location_id: 01K07MPBHGZ2H7Z7795PV3D01Y
   description: null
@@ -128,7 +142,9 @@ locations:
       - -306
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: LidNest3
 - location_name: Solo.Position1
   location_id: 01K07MPBHGCBJHJF7A03SZ3EQQ
   description: null
@@ -142,7 +158,9 @@ locations:
       - 5046
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: Solo.Position1
 - location_name: Solo.Position2
   location_id: 01K05DN23ET4SCZ5PVPZNS4KHW
   description: null
@@ -156,7 +174,9 @@ locations:
       - 2613
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: Solo.Position2
 - location_name: Hidex.Nest
   location_id: 01K07MPBHG1F53VY96RB6EFTY6
   description: null
@@ -170,7 +190,9 @@ locations:
       - 2373
       location_type: nest
       safe_approach_height: -27033
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: Hidex.Nest
 - location_name: Sealer.Nest
   location_id: 01K07MPBHGJ7XFCT5VHBH3M9FV
   description: null
@@ -184,7 +206,9 @@ locations:
       - 4071
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: Sealer.Nest
 - location_name: Peeler.Nest
   location_id: 01K07MPBHGJ3GYC10XA6C4PMB9
   description: null
@@ -198,7 +222,9 @@ locations:
       - 2351
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: Sealer.Nest
 - location_name: Liconic.Nest
   location_id: 01K07MPBHGSVMHP34GPNXT7B4J
   description: null
@@ -212,4 +238,6 @@ locations:
       - 1591
       location_type: nest
       safe_approach_height: 0
-  resource_definition: null
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: Liconic.Nest
