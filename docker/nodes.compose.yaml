@@ -1,6 +1,5 @@
 # * Common configuration
 x-madsci-service: &madsci-service
-  image: ghcr.io/ad-sdl/madsci:v0.4.2
   environment:
     - USER_ID=${USER_ID:-1000}
     - GROUP_ID=${GROUP_ID:-1000}
@@ -19,8 +18,13 @@ services:
     container_name: platecrane_poly
     image: ghcr.io/ad-sdl/hudson_platecrane_module
     privileged: true
+    build:
+      context: ../../hudson_platecrane_module
+      dockerfile: Dockerfile
+      tags:
+        - ghcr.io/ad-sdl/hudson_platecrane_module
     environment:
-      - NODE_URL=http://potts.cels.anl.gov:2000/
+      - NODE_URL=http://reed.cels.anl.gov:2000/
       - NODE_DEVICE=/dev/ttyUSB2
       - NODE_DEFINITION=nodes/platecrane_poly.node.yaml
     volumes:
@@ -33,8 +37,13 @@ services:
     container_name: peeler_potato
     image: ghcr.io/ad-sdl/brooks_xpeel_module
     privileged: true
+    build:
+      context: ../../brooks_xpeel_module
+      dockerfile: Dockerfile
+      tags:
+        - ghcr.io/ad-sdl/brooks_xpeel_module
     environment:
-      - NODE_URL=http://potts.cels.anl.gov:2001/
+      - NODE_URL=http://reed.cels.anl.gov:2001/
       - NODE_DEVICE_PORT=/dev/ttyUSB4
       - NODE_DEFINITION=nodes/peeler_potato.node.yaml
     volumes:
@@ -47,8 +56,13 @@ services:
     container_name: sealer_harp
     image: ghcr.io/ad-sdl/a4s_sealer_module
     privileged: true
+    build:
+      context: ../../a4s_sealer_module
+      dockerfile: Dockerfile
+      tags:
+        - ghcr.io/ad-sdl/a4s_sealer_module
     environment:
-      - NODE_URL=http://potts.cels.anl.gov:2002/
+      - NODE_URL=http://reed.cels.anl.gov:2002/
       - NODE_DEVICE_PATH=/dev/ttyUSB6
       - NODE_DEFINITION=nodes/sealer_harp.node.yaml
     volumes:

@@ -63,7 +63,7 @@ config:
   update_node_files: true
   status_update_interval: 2.0
   state_update_interval: 2.0
-  node_url: http://potts.cels.anl.gov:2001/
+  node_url: http://reed.cels.anl.gov:2001/
   uvicorn_kwargs:
     limit_concurrency: 10
   enable_rate_limiting: true
