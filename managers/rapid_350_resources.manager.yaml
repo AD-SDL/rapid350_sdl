@@ -36,7 +36,7 @@ default_templates:
     resource_description: plate stack for holding well plates
     owner: {}
     custom_attributes: null
-    capacity: 1
+    capacity: null
     default_children: null
     default_child_template: null
     default_child_quantity: null

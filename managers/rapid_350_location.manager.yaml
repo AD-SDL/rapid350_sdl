@@ -114,6 +114,22 @@ locations:
   resource_template_name: null
   resource_template_overrides: null
   allow_transfers: true
+- location_name: Sealer.Deep_Well.Nest
+  location_id: 01KJR888BM3PBZ2GRRJVXVRECF
+  description: null
+  representations:
+    platecrane_poly:
+      joint_angles:
+      - 118212
+      - -2500
+      - -4758
+      - 4071
+      location_type: nest
+      safe_approach_height: 0
+  resource_template_name: plate_nest
+  resource_template_overrides:
+    resource_name: Sealer.Nest
+  allow_transfers: true
 - location_name: Sealer.Nest
   location_id: 01K07MPBHGJ7XFCT5VHBH3M9FV
   description: null
